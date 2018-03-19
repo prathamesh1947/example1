@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.main {
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 400px;
+}
+
+.main .layer1 {
+    width: 100%;
+    height: 100%;
+    background: cornflowerblue;
+    transform: skewX(-20deg);
+    z-index: 1;
+    box-shadow: 0 0 0 15px #fff;
+    transition: .5s;
+}
+
+.main .layer2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #262626;
+    z-index: -1;
+    transition: 1s;
+
+}
+
+.main:hover .layer2 {
+    transform: scaleX(1.18) scaleY(.8);
+}
+
+.content {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    transform: skewX(-17deg);
+    padding: 50px;
+}
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Catamaran:900');
+
+
+h1 {
+    text-align: center;
+}
+
+.head {
+    text-align: center;
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    color: transparent;
+}
+
+.head:before,
+.head:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: #2196f3;
+    transition: .5s;
+    transition-delay: .25s;
+    font-family: serif;
+
+}
+
+.head:before {
+    -webkit-clip-path: polygon(0 0, 100% 2%, 100% 50%, 0 50%);
+    clip-path: polygon(0 0, 100% 2%, 100% 50%, 0 50%);
+}
+
+.head:hover:before {
+
+    transform: translate(10px, -2px);
+    transition-delay: .5s;
+}
+
+.head:after {
+    -webkit-clip-path: polygon(1% 50%, 100% 50%, 100% 100%, 0 100%);
+    clip-path: polygon(1% 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.head:hover:after {
+    transform: translate(-10px, 2px);
+    transition-delay: .8s;
+}
+
+ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+ul li:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    left: -100%;
+    height: 1px;
+    background: #262626;
+    transition: .5s;
+}
+
+ul li:hover:before {
+
+    left: 100%;
+}
+
+ul li a {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    color: transparent;
+}
+
+ul li a:before,
+ul li a:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: #262626;
+    transition: .5s;
+    transition-delay: .25s;
+}
+
+ul li a:before {
+    -webkit-clip-path: polygon(0 0, 100% 2%, 100% 50%, 0 50%);
+    clip-path: polygon(0 0, 100% 2%, 100% 50%, 0 50%);
+}
+
+ul li a:hover:before {
+
+    transform: translate(10px, -2px);
+    text-decoration: none !important;
+    transform: rotate(360deg);
+    transition-delay: .5s;
+}
+
+/* content nav*/
+
+/*home*/
+
+ul li a .home:hover:before {
+    color: black;
+}
+
+ul li a .home:hover:after {
+    color: black;
+}
+
+/* facebook*/
+
+ul li a.facebook:hover:before {
+    color: cornflowerblue;
+}
+
+ul li a.facebook:hover:after {
+    color: cornflowerblue;
+}
+
+/* google plus */
+
+ul li a.googleplus:hover:before {
+    color: red;
+}
+
+ul li a.googleplus:hover:after {
+    color: red;
+}
+
+/* quora */
+
+ul li a.quora:hover:before {
+    color: darkred;
+}
+
+ul li a.quora:hover:after {
+    color: darkred;
+}
+
+/* contact */
+
+ul li a.contact:hover:before {
+    color: cornflowerblue;
+}
+
+ul li a.contact:hover:after {
+    color: cornflowerblue;
+}
+
+/* youtube */
+
+ul li a.youtube:hover:before {
+    color: red;
+}
+
+ul li a.youtube:hover:after {
+    color: red;
+}
+
+/* nav content end */
+
+ul li a:after {
+    -webkit-clip-path: polygon(1% 50%, 100% 50%, 100% 100%, 0 100%);
+    clip-path: polygon(1% 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+ul li a:hover:after {
+    transform: translate(-10px, 2px);
+    text-decoration: none !important;
+    transform: rotate(-360deg);
+    transition-delay: .8s;
+}
+
+.sc {
+    position: absolute;
+    top: 250%;
+    background: #ff5c40;
+    left: 50%;
+}
+
+.bc {
+    position: absolute;
+    top: 355%;
+    left: 50%;
+}
+
+
+
+
+
+
+.icon {
+    background: cornflowerblue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.hamburger {
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    transition: .5s;
+}
+
+.hamburger:before,
+.hamburger:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    transition: .5s;
+}
+
+.hamburger:before {
+    top: -16px;
+}
+
+.hamburger:after {
+    top: 16px;
+}
+
+.icon.active .hamburger {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+}
+
+.icon.active .hamburger:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.icon.active .hamburger:after {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+
+
+
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: cornflowerblue;
+    border-radius: 10px;
+    animation: animate 3s linear infinite;
+
+}
+
+.loader p {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) perspective(200px) rotateX(0deg) rotateY(0deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) perspective(200px) rotateX(-180deg) rotateY(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) perspective(200px) rotateX(-180deg) rotateY(-180deg);
+    }
+}
+
+
+.tc {
+    position: absolute;
+    top: 400%;
+    left: 50%;
+}
